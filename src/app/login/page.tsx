@@ -20,7 +20,7 @@ export default function LoginPage() {
     const data = await res.json();
     if (res.ok) {
       localStorage.setItem('token', data.token);
-      router.push('/userlist');
+      router.push('/home');
     } else {
       setError(data.error);
     }
@@ -55,12 +55,11 @@ export default function LoginPage() {
             </a>
 
             <h1 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-              Welcome to Squid 🦑
+              Welcome to Accomodator Admin 🦑
             </h1>
 
             <p className="mt-4 leading-relaxed text-gray-500">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-              nam dolorum aliquam, quibusdam aperiam voluptatum.
+              The Full Control Center for Accomodator is a comprehensive dashboard that lets administrators manage properties, users, bookings and Reports all in one place.
             </p>
 
             <form
@@ -104,15 +103,15 @@ export default function LoginPage() {
 
               <div className="col-span-6">
                 <p className="text-sm text-gray-500">
-                  By logging in, you agree to our
-                  <a href="#" className="text-gray-700 underline">
+                  By logging in, you agree to our terms and conditions
+                  {/* <a href="#" className="text-gray-700 underline">
                     {' '}
                     terms and conditions{' '}
-                  </a>
-                  and
-                  <a href="#" className="text-gray-700 underline">
+                  </a> */}
+                  and privacy policy
+                  {/* <a href="#" className="text-gray-700 underline">
                     privacy policy
-                  </a>
+                  </a> */}
                   .
                 </p>
               </div>
@@ -125,13 +124,13 @@ export default function LoginPage() {
                   Login
                 </button>
 
-                <p className="mt-4 text-sm text-gray-500 sm:mt-0">
+                {/* <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                   Dont have an account?
                   <a href="/register" className="text-gray-700 underline">
                     Register
                   </a>
                   .
-                </p>
+                </p> */}
               </div>
             </form>
             {error && <p className="mt-4 text-red-500">{error}</p>}

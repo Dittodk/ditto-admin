@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 interface Reservation {
   _id: string;
@@ -66,7 +67,18 @@ export default function AdminReservationsPage() {
 
   return (
     <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">Admin Reservations</h1>
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-3xl font-bold">
+          Reservations Management
+        </h1>
+
+        <Link
+          href="/logout"
+          className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition"
+        >
+          Logout
+        </Link>
+      </div>
       {error && <p className="text-red-500 mb-4">{error}</p>}
       <div className="overflow-x-auto bg-white shadow-md rounded-lg">
         <table className="min-w-full table-auto">
