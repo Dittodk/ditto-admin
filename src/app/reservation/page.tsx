@@ -85,7 +85,7 @@ export default function AdminReservationsPage() {
           <thead className="bg-gray-100">
             <tr>
               <th className="px-4 py-2">User</th>
-              <th className="px-4 py-2">Hotel</th>
+              <th className="px-4 py-2">Property</th>
               <th className="px-4 py-2">Start Date</th>
               <th className="px-4 py-2">End Date</th>
               <th className="px-4 py-2">Total Price</th>
