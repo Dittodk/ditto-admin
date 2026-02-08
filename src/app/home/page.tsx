@@ -22,6 +22,11 @@ const HomePage = () => {
               Reservations
             </Link>
           </li>
+          <li>
+            <Link href="/reports" className="text-blue-600 hover:underline">
+              Reports Status
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
